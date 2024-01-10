@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 const config = {
   connectionLimit: 10,
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "ex_to_mysql",
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
   waitForConnections: true,
 };
 
